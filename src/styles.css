@@ -1,6 +1,14 @@
-* {
+* { /*CSS Comment
+    First CSS selector = * */
   box-sizing: border-box;
 }
+
+/* 
+body = second CSS selector. 
+Defines the style of large parts of app
+.square defines the style of any component where the className property is set to square
+This matches the button from Square component in App.js file
+*/
 
 body {
   font-family: sans-serif;
