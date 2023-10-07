@@ -1,27 +1,36 @@
 export default function Board() { // creating a component - a piece of reusable code that represents part of a user interface.
   return ( 
     //                  using fragments (<> to </>) to wrap multiple adjacent JSX elements
+    // added value prop to each square component rendered by Board component
     <>  
       <div className="board-row">
-      <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square value = "1"/>
+        <Square value = "2"/>
+        <Square value = "3"/>
       </div>
 
       <div className="board-row">
-        <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square value = "4"/>
+        <Square value = "5"/>
+        <Square value = "6"/>
       </div>
         
       <div className="board-row">
-        <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square value = "7"/>
+        <Square value = "8"/>
+        <Square value = "9"/>
       </div>  
     </>
   );
 }
+  // curly braces used to escape into JavaScript from JSK
+function Square({ value }) { // reusable square component
+    return <button className="square">{value}</button>;
+}
+
+// Square component is passed prop called value // (properties)
+
+
 
 // function is called a Square. 
   // export keyword makes this function accessible outside this file
