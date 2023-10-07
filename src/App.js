@@ -23,11 +23,26 @@ export default function Board() { // creating a component - a piece of reusable 
     </>
   );
 }
-  // curly braces used to escape into JavaScript from JSK
-function Square({ value }) { // reusable square component
-    return <button className="square">{value}</button>;
+function Square({ value }) {
+  function handleClick() {
+    console.log('clicked!');
+  }
+  
+  return (
+    <button
+      className="square"
+      handleClick={onclick}
+     >
+      {value}
+    </button>
+  );
+
 }
 
+
+// curly braces used to escape into JavaScript from JSK
+  // reusable square component
+    // Declaring a function called handleClick inside Square, adding onClick to props
 // Square component is passed prop called value // (properties)
 
 
