@@ -1,11 +1,25 @@
-export default function Square() { // creating a component - a piece of reusable code that represents part of a user interface.
+export default function Board() { // creating a component - a piece of reusable code that represents part of a user interface.
   return ( 
     //                  using fragments (<> to </>) to wrap multiple adjacent JSX elements
     <>  
+      <div className="board-row">
       <button className="square">X</button>
-      <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>
+
+      <div className="board-row">
+        <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>
+        
+      <div className="board-row">
+        <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>  
     </>
-  
   );
 }
 

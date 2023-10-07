@@ -80,7 +80,9 @@ body {
 }
 
 .board-row:after {
-  clear: both;
+  clear: both; /* Floating the elements are not allowed to float on both sides
+                  It is used when there's no need of any element floating on the left and right side
+                  No other element should take up space on the right and left side*/
   content: '';
   display: table;
 }
