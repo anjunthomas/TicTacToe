@@ -1,11 +1,22 @@
 import { useState } from 'react';
 export default function Board() { // creating a component - a piece of reusable code that represents part of a user interface.
+  const [xIsNext, setXIsNext] = useState(true); // boolean flipped determining whether X is next or not
   const [squares, setSquares] = useState(Array(9).fill(null));
   
   function handleClick(i) {
+    // To not override what is already in Square
+    // return if value is present
+    if(squares[i]){
+      return;
+    }
     const nextSquares = squares.slice();
-    nextSquares[i] = 'X';
+    if(xIsNext){ // if is next, then X appears onClick
+      nextSquares[i] = 'X';
+    } else{ // if false, then O appears
+      nextSquares[i] = 'O';
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
   // creates an array with 9 elements
   // sets each of them to null
